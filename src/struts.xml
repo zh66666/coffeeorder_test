@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="demo1" extends="struts-default" namespace="/">
+        <action name="test_*" class="CommentTest" method="{1}">
+            <result name="commentlist">/jsps/comment.jsp</result>
+            <result name="tocommentaddpage">/jsps/commentaddpage.jsp</result>
+            <result name="commentadd" type="redirectAction">test_commentlist</result>
+            <result name="commentdelete" type="redirectAction">test_commentlist</result>
+            <result name="commentedit">/jsps/commentedit.jsp</result>
+            <result name="commentupdate" type="redirectAction">test_commentlist</result>
+        </action>
+
+    </package>
+
+</struts>
+
+
+
